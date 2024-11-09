@@ -1,0 +1,32 @@
+{
+  "name": "hello-venn",
+  "version": "1.0.0",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "step:1:deploy": "hardhat --network holesky run scripts/step-1/deploy.ts",
+    "step:1:deposit": "hardhat --network holesky run scripts/step-1/deposit.ts",
+    "step:1:withdraw": "hardhat --network holesky run scripts/step-1/withdraw.ts",
+    "step:2:deposit": "hardhat --network holesky run scripts/step-2/deposit.ts",
+    "step:2:withdraw": "hardhat --network holesky run scripts/step-2/withdraw.ts",
+    "step:3:deposit": "hardhat --network holesky run scripts/step-3/deposit.ts",
+    "step:3:withdraw": "hardhat --network holesky run scripts/step-3/withdraw.ts"
+  },
+  "keywords": [
+    "web3",
+    "venn",
+    "firewall",
+    "security"
+  ],
+  "author": "Ironblocks LTD",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "toolog": "^1.0.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0"
+  }
+}
