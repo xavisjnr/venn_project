@@ -3,7 +3,20 @@
 Welcome, fellow builder!  
 This repo serves as a "Hello World" to get you up & running with Venn like a pro in 10m or less! 🏆
 
-## SafeVault.sol
+**Table of Contents**
+
+1. [A Safe Vault](#a-safe-vault)
+2. [Step By Step](#step-0--setup)
+   1. [Setup](#step-0--setup)
+   2. [Getting to `Venn Ready`](#step-1--getting-to-venn-ready)
+   3. [From `Venn Ready` To `Venn Enabled`](#step-2--from-venn-ready-to-venn-enabled)
+   4. [`Venn Approved` Transactions](#step-3--venn-approved-transactions)
+
+3. [Bonus Round](#bonus-round)
+
+<br />
+
+## A Safe Vault
 
 Our contract is a (very) simple **[SafeVault.sol](contracts/SafeVault.sol)** with the following interface:
 
