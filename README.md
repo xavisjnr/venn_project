@@ -1,4 +1,4 @@
-# 👋 ![Venn](https://explorer.venn.build/assets/venn-logo.svg)
+# 👋 Hello Venn
 
 Welcome, fellow builder!  
 This repo serves as a "Hello World" to get you up & running with Venn like a pro in 10m or less! 🏆
@@ -61,7 +61,7 @@ Let's make sure everything works as-is before we start to tinker with this proje
    ```
 
    All tests pass, and we can continue to the next step.
-   <br />
+   <br /><br />
 
 ## Step 1 / Getting to `Venn Ready`
 
@@ -223,6 +223,6 @@ Let's use the Venn DApp SDK so that we can get our transactions approved:
 
 ## Bonus Round
 
-- Checkout **[Venn Playground](https://playground.venn.build)** for a live version of the **`SafeVault`** Hello Venn DApp <br /><br />
+- Checkout **[Venn Playground](https://playground.venn.build)** for a live version of the **`SafeVault`** Hello Venn DApp <br />
 
 - Use the **[Venn Explorer](https://explorer.venn.build)** to ... well, explore :)
