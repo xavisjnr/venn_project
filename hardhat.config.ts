@@ -7,6 +7,8 @@ dotenv.config();
 const config: HardhatUserConfig = {
   solidity: "0.8.24",
 
+  defaultNetwork: "holesky",
+
   networks: {
     holesky: {
       url: process.env.HOLESKY_RPC_URL,
