@@ -10,6 +10,7 @@ describe("SafeVault", function () {
 
     const SafeVault = await hre.ethers.getContractFactory("SafeVault");
     safeVault = await SafeVault.deploy();
+    await safeVault.waitForDeployment();
   });
 
   it("user can deposit", async function () {
@@ -17,7 +18,8 @@ describe("SafeVault", function () {
     const depositAmount = hre.ethers.parseEther("0.0001");
 
     // Act
-    await safeVault.connect(user).deposit({ value: depositAmount });
+    const tx = await safeVault.connect(user).deposit({ value: depositAmount });
+    await tx.wait();
 
     // Assert
     const userDeposits = await safeVault.deposits(user.address);
@@ -27,10 +29,12 @@ describe("SafeVault", function () {
   it("user can withdraw", async function () {
     // Arrange
     const depositAmount = hre.ethers.parseEther("0.0001");
-    await safeVault.connect(user).deposit({ value: depositAmount });
+    const depositTx = await safeVault.connect(user).deposit({ value: depositAmount });
+    await depositTx.wait();
 
     // Act
-    await safeVault.connect(user).withdraw(depositAmount);
+    const withdrawTx = await safeVault.connect(user).withdraw(depositAmount);
+    await withdrawTx.wait();
 
     // Assert
     const userDeposits = await safeVault.deposits(user.address);
