@@ -45,7 +45,7 @@ Let's make sure everything works as-is before we start to tinker with this proje
 2. **Install Dependencies** 📦  
 
    ```bash
-   npm install
+   npm ci
    ```
 
    <br />
