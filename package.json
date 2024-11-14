@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "compile": "hardhat compile",
-    "test": "hardhat --network hardhat test",
+    "test": "hardhat test",
     "step:1:deploy": "hardhat run scripts/step-1/deploy.ts",
     "step:1:deposit": "hardhat run scripts/step-1/deposit.ts",
     "step:1:withdraw": "hardhat run scripts/step-1/withdraw.ts",

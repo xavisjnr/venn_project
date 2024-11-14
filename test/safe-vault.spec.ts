@@ -14,7 +14,7 @@ describe("SafeVault", function () {
 
   it("user can deposit", async function () {
     // Arrange
-    const depositAmount = hre.ethers.parseEther("1");
+    const depositAmount = hre.ethers.parseEther("0.0001");
 
     // Act
     await safeVault.connect(user).deposit({ value: depositAmount });
@@ -26,7 +26,7 @@ describe("SafeVault", function () {
 
   it("user can withdraw", async function () {
     // Arrange
-    const depositAmount = hre.ethers.parseEther("1");
+    const depositAmount = hre.ethers.parseEther("0.0001");
     await safeVault.connect(user).deposit({ value: depositAmount });
 
     // Act
