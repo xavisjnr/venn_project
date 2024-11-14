@@ -4,7 +4,7 @@ import { SafeVault } from "../../typechain-types";
 
 const logger = new Toolog("hello-venn");
 
-const SAFE_VAULT_ADDRESS = require('../../venn.config.json')?.networks?.holesky?.contracts?.SafeVault;
+const SAFE_VAULT_ADDRESS = require('../../venn.config.json')?.networks[hre.network.name]?.contracts?.SafeVault;
 
 async function main() {
     if (!SAFE_VAULT_ADDRESS) {

@@ -26,7 +26,7 @@ async function main() {
     logger.warn(' -> Writing contract address to venn.config.json');
     const config = {
         networks: {
-            holesky: {
+            [hre.network.name]: {
                 contracts: {
                     SafeVault: await safeVault.getAddress()
                 },

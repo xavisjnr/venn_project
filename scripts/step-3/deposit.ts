@@ -6,8 +6,8 @@ import { VennClient } from "@vennbuild/venn-dapp-sdk";
 const logger = new Toolog("hello-venn");
 
 const VENN_SIGNER_URL = 'https://signer2.testnet.venn.build/api/17000/sign'
-const SAFE_VAULT_ADDRESS = require('../../venn.config.json')?.networks?.holesky?.contracts?.SafeVault;
-const VENN_POLICY_ADDRESS = require('../../venn.config.json')?.networks?.holesky?.policyAddress;
+const SAFE_VAULT_ADDRESS = require('../../venn.config.json')?.networks[hre.network.name]?.contracts?.SafeVault;
+const VENN_POLICY_ADDRESS = require('../../venn.config.json')?.networks[hre.network.name]?.policyAddress
 
 async function main() {
     if (!SAFE_VAULT_ADDRESS) {
