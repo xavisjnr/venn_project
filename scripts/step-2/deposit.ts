@@ -35,7 +35,8 @@ async function main() {
     });
 
     try {
-        await tx.wait(1);
+        const waitBlocks = ["localhost", "local", "hardhat", "anvil"].includes(hre.network.name) ? 1 : 3;
+        await tx.wait(waitBlocks);
     }
     catch (e) {
         logger.warn(` -> Transaction hash: ${tx.hash}`);

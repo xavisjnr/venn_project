@@ -16,7 +16,9 @@ async function main() {
     logger.warn(' -> Deploying ...');
     const SafeVault = await hre.ethers.getContractFactory("SafeVault");
     const safeVault = await SafeVault.deploy();
-    await safeVault.deploymentTransaction()?.wait(3);
+    
+    const waitBlocks = ["localhost", "local", "hardhat", "anvil"].includes(hre.network.name) ? 1 : 3;
+    await safeVault.deploymentTransaction()?.wait(waitBlocks);
 
     logger.warn(` -> SafeVault address: ${await safeVault.getAddress()}`);
     logger.warn(` -> Transaction hash: ${safeVault.deploymentTransaction()?.hash}\n`);

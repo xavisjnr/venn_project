@@ -29,7 +29,9 @@ async function main() {
     logger.warn(` -> Depositing ${hre.ethers.formatEther(depositAmount)} ETH to SafeVault`);
 
     const tx = await safeVault.deposit({ value: depositAmount });
-    await tx.wait(3);
+    
+    const waitBlocks = ["localhost", "local", "hardhat", "anvil"].includes(hre.network.name) ? 1 : 3;
+    await tx.wait(waitBlocks);
     logger.warn(` -> Transaction hash: ${tx.hash}`);
     
     logger.ok();
