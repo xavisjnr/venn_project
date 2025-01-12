@@ -36,7 +36,7 @@ Let's make sure everything works as-is before we start to tinker with this proje
 1. **Clone the Repo** 🖥️  
 
    ```bash
-   git clone git@github.com:ironblocks/hello-venn.git
+   git clone https://github.com/ironblocks/hello-venn.git
    cd hello-venn
    ```
 
