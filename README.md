@@ -5,18 +5,18 @@ This repo serves as a "Hello World" to get you up & running with Venn like a pro
 
 **Table of Contents**
 
-1. [A Safe Vault](#a-safe-vault)
-2. [Step By Step](#step-0--setup)
+1. [Your Demo dApp - A Safe Vault](#your-demo-dapp---a-safe-vault)
+2. [Prerequisits](#prerequisits)
+3. Step By Step
    1. [Setup](#step-0--setup)
-   2. [Getting to `Venn Ready`](#step-1--getting-to-venn-ready)
-   3. [From `Venn Ready` To `Venn Enabled`](#step-2--from-venn-ready-to-venn-enabled)
-   4. [`Venn Approved` Transactions](#step-3--venn-approved-transactions)
-
-3. [Bonus Round](#bonus-round)
+   2. [Add Venn To Your Smart Contracts](#step-1--add-venn-to-your-smart-contracts)
+   3. [Enable Venn](#step-2--enable-venn)
+   4. [Add Venn SDK To Your Frontend](#step-3--add-venn-sdk-to-your-frontend)
+   5. [Bonus Round](#bonus-round)
 
 <br />
 
-## A Safe Vault
+## Your Demo dApp - A Safe Vault
 
 Our contract is a (very) simple **[SafeVault.sol](contracts/SafeVault.sol)** with the following interface:
 
@@ -28,6 +28,10 @@ Our contract is a (very) simple **[SafeVault.sol](contracts/SafeVault.sol)** wit
 
 - **`withdraw()`**
   a method for users to withdraw previously deposited ETH <br /><br />
+
+## Prerequisits
+
+1. A wallet with some at Holesky ETH in it
 
 ## Step 0 / Setup
 
@@ -76,7 +80,7 @@ Let's make sure everything works as-is before we start to tinker with this proje
    All tests pass, and we can continue to the next step.
    <br /><br />
 
-## Step 1 / Getting to `Venn Ready`
+## Step 1 / Add Venn To Your Smart Contracts
 
 We're going to use the `venn-cli` to integrate Venn into our smart contracts. This will update our smart contracts, making them **`Venn Ready`**, without changing their existing behavior until we actually enable Venn in **Step 2 / From `Venn Ready` To `Venn Enabled`** below.
 
@@ -93,6 +97,8 @@ We're going to use the `venn-cli` to integrate Venn into our smart contracts. Th
    ```bash
    venn fw integ -d contracts
    ```
+
+   > **Note:** On the first run, this will also install the `@ironblocks/firewall-consumer` SDK package
 
    <br />
 
@@ -131,7 +137,7 @@ We're going to use the `venn-cli` to integrate Venn into our smart contracts. Th
 
    <br />
 
-## Step 2 / From `Venn Ready` To `Venn Enabled`
+## Step 2 / Enable Venn
 
 We'll use the `venn-cli` to enable Venn's security features on our smart contracts:
 
@@ -183,7 +189,7 @@ We'll use the `venn-cli` to enable Venn's security features on our smart contrac
 
    <br />
 
-## Step 3 / `Venn Approved` Transactions
+## Step 3 / Add Venn SDK To Your Frontend
 
 Let's use the Venn DApp SDK so that we can get our transactions approved:
 
