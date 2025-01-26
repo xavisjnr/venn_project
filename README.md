@@ -1,24 +1,27 @@
 # 👋 Hello Venn
 
 Welcome, fellow builder!  
-This repo serves as a "Hello World" to get you up & running with Venn like a pro in 10m or less! 🏆
+This repository is your quick start guide to Venn intergration for smart contracts and dApps. Think of it as your "Hello World" for Venn, designed to get you up and running in 10 minutes or less. 🏆
+
+By the end of this tutorial, you’ll have a secure, Venn-enabled Safe Vault demo dApp.
 
 **Table of Contents**
 
 1. [Your Demo dApp - A Safe Vault](#your-demo-dapp---a-safe-vault)
 2. [Prerequisits](#prerequisits)
-3. Step By Step
-   1. [Setup](#step-0--setup)
-   2. [Add Venn To Your Smart Contracts](#step-1--add-venn-to-your-smart-contracts)
-   3. [Enable Venn](#step-2--enable-venn)
-   4. [Add Venn SDK To Your Frontend](#step-3--add-venn-sdk-to-your-frontend)
-   5. [Bonus Round](#bonus-round)
+3. [Step 0: Setup](#step-0--setup)
+4. [Step 1: Add Venn To Your Smart Contracts](#step-1--add-venn-to-your-smart-contracts)
+5. [Step 2: Enable Venn](#step-2--enable-venn)
+6. [Step 3: Add Venn SDK To Your Frontend](#step-3--add-venn-sdk-to-your-frontend)
+7. [Bonus Round](#bonus-round)
 
 <br />
 
 ## Your Demo dApp - A Safe Vault
 
-Our contract is a (very) simple **[SafeVault.sol](contracts/SafeVault.sol)** with the following interface:
+The Safe Vault is a simple smart contract designed to help you get hands-on with Venn’s security features. Learn the basics without unnecessary complexity.
+
+The Safe Vault contract **[SafeVault.sol](contracts/SafeVault.sol)** has the following interface:
 
 - **`deposits`**
   a mapping between a user's address and how much ETH they have <br /><br />
@@ -31,11 +34,13 @@ Our contract is a (very) simple **[SafeVault.sol](contracts/SafeVault.sol)** wit
 
 ## Prerequisits
 
-1. A wallet with some at Holesky ETH in it
+- A wallet with some at Holesky ETH in it, if you need testnet tokens, you can get them from a faucet such as [Google Faucet](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
 
 ## Step 0 / Setup
 
-Let's make sure everything works as-is before we start to tinker with this project:
+Before we dive into integrating Venn, let’s ensure the demo dApp is correctly set up and everything works as expected.
+
+Follow these steps to get started:
 
 1. **Clone the Repo** 🖥️  
 
@@ -82,7 +87,13 @@ Let's make sure everything works as-is before we start to tinker with this proje
 
 ## Step 1 / Add Venn To Your Smart Contracts
 
-We're going to use the `venn-cli` to integrate Venn into our smart contracts. This will update our smart contracts, making them **`Venn Ready`**, without changing their existing behavior until we actually enable Venn in **Step 2 / From `Venn Ready` To `Venn Enabled`** below.
+Now that your demo dApp is set up, it’s time to make your smart contracts `Venn Ready`. In this step, we’ll integrate Venn’s security framework into the Safe Vault contract using the `venn-cli`.
+
+This integration will:
+
+- Add Venn-Modifiers to your contract.
+- Prepare your contract to use Venn’s security infrastructure without changing its existing functionality.
+- Enable Venn, and move from `Venn Ready` to `Venn Enabled` in **Step 2** below.
 
 1. **Install Venn CLI** 📦  
 
@@ -139,7 +150,7 @@ We're going to use the `venn-cli` to integrate Venn into our smart contracts. Th
 
 ## Step 2 / Enable Venn
 
-We'll use the `venn-cli` to enable Venn's security features on our smart contracts:
+With your smart contracts now `Venn Ready`, it’s time to activate Venn’s security features. Using the `venn-cli`, we’ll enable real-time protection, ensuring your contracts are safeguarded against malicious transactions.
 
 1. **Enable Venn** 🛡️  
 
@@ -191,7 +202,7 @@ We'll use the `venn-cli` to enable Venn's security features on our smart contrac
 
 ## Step 3 / Add Venn SDK To Your Frontend
 
-Let's use the Venn DApp SDK so that we can get our transactions approved:
+To complete your integration, we’ll use the `Venn dApp SDK` to ensure every transaction from your frontend is securely validated before being sent on-chain.
 
 1. **Install The SDK** 📦  
 
