@@ -11,7 +11,7 @@ const config: HardhatUserConfig = {
 
   networks: {
     holesky: {
-      url: process.env.HOLESKY_RPC_URL,
+      url: process.env.HOLESKY_RPC_URL as string,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 17000,
       gasPrice: 3000000000,
